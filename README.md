@@ -40,7 +40,7 @@ buildscript {
 To build from command line --- gradlew installDebug
 
 ######### For Linting #########
- lintOptions {
+--- lintOptions {
         // Turns off checks for the issue IDs you specify.
         disable 'TypographyFractions','TypographyQuotes'
         // Turns on checks for the issue IDs you specify. These checks are in
@@ -61,11 +61,13 @@ To build from command line --- gradlew installDebug
         // that only new issues are reportedYou can take a snapshot of your project's current set of warnings,
         // and then use the snapshot as a baseline for future inspection runs so that only new issues are reported
         baseline file("lint-baseline.xml")
-    }
+    }----
+    
 To lint from command line --- gradlew lint
 
 ####### To run Instrumented unit test & code coverage ########
-apply plugin: 'java'
+
+---apply plugin: 'java'
  
 repositories {
     mavenCentral()
@@ -74,7 +76,7 @@ repositories {
 dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
-}
+} -----
 
 To test from command line ---gradlew test
 
@@ -82,26 +84,27 @@ To test from command line ---gradlew test
 
 ######## To Build the project#####
 
-lane :slackbuild do
+-----lane :slackbuild do
   gradle(task: "assembleRelease")
   slack(message: "Build Successful!")
   upload_to_slack()
-end
+end-----
 command to build from commndline --- fastlane slackbuild
 
 
 ######### For Linting #########
-# Allow output detail in console
+
+-----# Allow output detail in console
 pod_lib_lint(verbose: true)
 # Allow warnings during pod lint
 pod_lib_lint(allow_warnings: true)
-command to lint from commndline  --- fastlane run pod_lib_lint
+command to lint from commndline  --- fastlane run pod_lib_lint------
 
 ####### To run Instrumented unit test & code coverage ########
 
-lane :tests do
+-----lane :tests do
   gradle(task: "test")
 end
-command to test app from commndline  --- fastlane tests
+command to test app from commndline  --- fastlane tests ------
 
 
