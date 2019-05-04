@@ -65,9 +65,18 @@ To build from command line --- gradlew installDebug
 To lint from command line --- gradlew lint
 
 ####### To run Instrumented unit test & code coverage ########
-gradlew test
+apply plugin: 'java'
+ 
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
+}
 
-
+To test from command line ---gradlew test
 
 13.Scripts forFastline Script 
 ######## To Build the project#####
