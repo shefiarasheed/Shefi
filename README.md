@@ -14,19 +14,61 @@ Done bellow things
 5.created the Model class for the json response.
 6.call the API using retrofit 
 7.parse the Json result and display in recycleview as per requirement 
-8.used MVC pattern to develop this app.
-Model view and controller strategy.
+8.used MVC pattern to develop this app.(Model view and controller strategy)
 
-Need to implement.
+implemeted Junittest for checking the API key is valid or not
 
-1.junit test for code functionalities
-2.Espresso for UI testing.
-3.fastline for building the app command line
-4.run static code analysis such as linting
-5.run unit tests and code coverage
-6.SonarQube report for the code showing its quality summary
 
-I am lack of Android studio in my personel lap.The latest Android sdk needs
-3.5GB yo download.
+To turn off animation on your test device, go to Settings > Developer Options and turn off all the following options under the "Drawing" section: 
 
-Please let me to complete tommorow.
+Window animation scale
+Transition animation scale
+Animator duration scale
+
+Test recycleView
+
+
+
+Gradle Script 
+######## To Build the project#####
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+command --- gradlew installDebug
+
+######### For Linting #########
+gradlew lint
+
+
+####### To run Instrumented unit test & code coverage ########
+gradlew test
+
+
+
+Fastline Script 
+######## To Build the project#####
+
+lane :slackbuild do
+  gradle(task: "assembleRelease")
+  slack(message: "Build Successful!")
+  upload_to_slack()
+end
+command ---fastlane slackbuild
+
+
+######### For Linting #########
+fastlane run pod_lib_lint
+
+####### To run Instrumented unit test & code coverage ########
+fastlane tests
+
+
