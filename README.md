@@ -44,11 +44,7 @@ To build from command line --- gradlew installDebug
         // Turns off checks for the issue IDs you specify.
         disable 'TypographyFractions','TypographyQuotes'
         // Turns on checks for the issue IDs you specify. These checks are in
-        // addition to the default lint checks.
         enable 'RtlHardcoded','RtlCompat', 'RtlEnabled'
-        // To enable checks for only a subset of issue IDs and ignore all others,
-        // list the issue IDs with the 'check' property instead. This property overrides
-        // any issue IDs you enable or disable using the properties above.
         check 'NewApi', 'InlinedApi'
         // If set to true, turns off analysis progress reporting by lint.
         quiet true
@@ -56,10 +52,6 @@ To build from command line --- gradlew installDebug
         abortOnError false
         // if true, only report errors.
         ignoreWarnings true
-        //You can take a snapshot of your project's current set
-        // of warnings, and then use the snapshot as a baseline for future inspection runs so
-        // that only new issues are reportedYou can take a snapshot of your project's current set of warnings,
-        // and then use the snapshot as a baseline for future inspection runs so that only new issues are reported
         baseline file("lint-baseline.xml")
     }----
     
@@ -89,6 +81,8 @@ To test from command line ---gradlew test
   slack(message: "Build Successful!")
   upload_to_slack()
 end-----
+
+
 command to build from commndline --- fastlane slackbuild
 
 
@@ -96,8 +90,9 @@ command to build from commndline --- fastlane slackbuild
 
 -----# Allow output detail in console
 pod_lib_lint(verbose: true)
-# Allow warnings during pod lint
+// Allow warnings during pod lint
 pod_lib_lint(allow_warnings: true)
+
 command to lint from commndline  --- fastlane run pod_lib_lint------
 
 ####### To run Instrumented unit test & code coverage ########
@@ -105,6 +100,7 @@ command to lint from commndline  --- fastlane run pod_lib_lint------
 -----lane :tests do
   gradle(task: "test")
 end
+
 command to test app from commndline  --- fastlane tests ------
 
 
