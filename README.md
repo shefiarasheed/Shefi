@@ -87,13 +87,21 @@ lane :slackbuild do
   slack(message: "Build Successful!")
   upload_to_slack()
 end
-command ---fastlane slackbuild
+command to build from commndline --- fastlane slackbuild
 
 
 ######### For Linting #########
-fastlane run pod_lib_lint
+# Allow output detail in console
+pod_lib_lint(verbose: true)
+# Allow warnings during pod lint
+pod_lib_lint(allow_warnings: true)
+command to lint from commndline  --- fastlane run pod_lib_lint
 
 ####### To run Instrumented unit test & code coverage ########
-fastlane tests
+
+lane :tests do
+  gradle(task: "test")
+end
+command to test app from commndline  --- fastlane tests
 
 
