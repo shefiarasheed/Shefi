@@ -8,27 +8,21 @@ This API return json response.
 
 Done bellow things
 
-1.created an Android project
-2.created a recycleView with adapter to list the NY times polular
-3.set the duration as 7 in the URL
-5.created the Model class for the json response.
-6.call the API using retrofit 
-7.parse the Json result and display in recycleview as per requirement 
-8.used MVC pattern to develop this app.(Model view and controller strategy)
-
-implemeted Junittest for checking the API key is valid or not
-
-
-To turn off animation on your test device, go to Settings > Developer Options and turn off all the following options under the "Drawing" section: 
-
+1.Created an Android project
+2.Created a recycleView with adapter to list the NY times polular
+3.Set the duration as 7 in the URL
+5.Created the Model class for the json response.
+6.Call the API using retrofit to parse the result. 
+7.Parse the Json result and display in recycleview as per requirement 
+8.Used MVC pattern to develop this app.(Model view and controller strategy)
+9.Implemeted Junittest. The testing implemented for checking the API key is valid or not
+10.Used good Java coding pattern to implemet this app.
+11.Implemented Espresso UI testing.The testing is implemeted  for validating matching the textview text values with constant String values.For testing this, 
+Turn off animation on your test device, go to Settings > Developer Options and turn off all the following options under the "Drawing" section: 
 Window animation scale
 Transition animation scale
 Animator duration scale
-
-Test recycleView
-
-
-
+12.Scripts for Gradle,
 Gradle Script 
 ######## To Build the project#####
 buildscript {
@@ -43,18 +37,17 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-command --- gradlew installDebug
+To build from command line --- gradlew installDebug
 
 ######### For Linting #########
 gradlew lint
-
 
 ####### To run Instrumented unit test & code coverage ########
 gradlew test
 
 
 
-Fastline Script 
+13.Scripts forFastline Script 
 ######## To Build the project#####
 
 lane :slackbuild do
