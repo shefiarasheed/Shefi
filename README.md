@@ -40,7 +40,29 @@ buildscript {
 To build from command line --- gradlew installDebug
 
 ######### For Linting #########
-gradlew lint
+ lintOptions {
+        // Turns off checks for the issue IDs you specify.
+        disable 'TypographyFractions','TypographyQuotes'
+        // Turns on checks for the issue IDs you specify. These checks are in
+        // addition to the default lint checks.
+        enable 'RtlHardcoded','RtlCompat', 'RtlEnabled'
+        // To enable checks for only a subset of issue IDs and ignore all others,
+        // list the issue IDs with the 'check' property instead. This property overrides
+        // any issue IDs you enable or disable using the properties above.
+        check 'NewApi', 'InlinedApi'
+        // If set to true, turns off analysis progress reporting by lint.
+        quiet true
+        // if set to true (default), stops the build if errors are found.
+        abortOnError false
+        // if true, only report errors.
+        ignoreWarnings true
+        //You can take a snapshot of your project's current set
+        // of warnings, and then use the snapshot as a baseline for future inspection runs so
+        // that only new issues are reportedYou can take a snapshot of your project's current set of warnings,
+        // and then use the snapshot as a baseline for future inspection runs so that only new issues are reported
+        baseline file("lint-baseline.xml")
+    }
+To lint from command line --- gradlew lint
 
 ####### To run Instrumented unit test & code coverage ########
 gradlew test
