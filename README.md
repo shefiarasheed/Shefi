@@ -81,7 +81,6 @@ android {
  apply plugin: 'com.android.application'
 //apply plugin: 'org.sonarqube'
 
-android {
    
     lintOptions {
         // Turns off checks for the issue IDs you specify.
@@ -96,7 +95,7 @@ android {
         ignoreWarnings true
         baseline file("lint-baseline.xml")
     }
-}
+
 
     
 To lint from command line --- gradlew lint
