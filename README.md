@@ -41,7 +41,8 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-To build from command line --- gradlew installDebug
+
+To build from command line --- To run a Gradle command, you can simply use the gradlew script found in the root of your project (or gradlew.bat on Windows) followed by the name of the task you want to run. For instance, to build a debug version of your Android application, you can run ./gradlew assembleDebug from the root of your repository. In a default project setup, the resulting apk can then be found in app/build/outputs/apk/app-debug.apk
 
 ######### For Linting #########
 --- lintOptions {
