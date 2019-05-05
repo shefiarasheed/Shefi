@@ -29,20 +29,25 @@ Animator duration scale
 12.Scripts for Gradle,
 Gradle Script 
 ######## To Build the project#####
-buildscript {
-    repositories {
-        jcenter()
-        google()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+android {
+...
+defaultConfig { ... }
+signingConfigs {
+    release {
+        storeFile file("myreleasekey.keystore")
+        storePassword "password"
+        keyAlias "MyReleaseKey"
+        keyPassword "password"
     }
 }
+buildTypes {
+    release {
+        ...
+        signingConfig signingConfigs.release
+    }
+}}
 
-To build from command line --- To run a Gradle command, you can simply use the gradlew script found in the root of your project (or gradlew.bat on Windows) followed by the name of the task you want to run. For instance, to build a debug version of your Android application, you can run ./gradlew assembleDebug from the root of your repository. In a default project setup, the resulting apk can then be found in app/build/outputs/apk/app-debug.apk
+ To build from command line --- To run a Gradle command, you can simply use the gradlew script found in the root of your project (or gradlew.bat on Windows) followed by the name of the task you want to run. For instance, to build a debug version of your Android application, you can run ./gradlew assembleDebug from the root of your repositor & for release ./gradlew assembleRelease. In a default project setup, the resulting apk can then be found in app/build/outputs/apk/app-debug.apk
 
 ######### For Linting #########
 --- lintOptions {
