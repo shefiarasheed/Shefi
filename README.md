@@ -78,7 +78,12 @@ android {
 
 ######### For Linting #########
 
- lintOptions {
+ apply plugin: 'com.android.application'
+//apply plugin: 'org.sonarqube'
+
+android {
+   
+    lintOptions {
         // Turns off checks for the issue IDs you specify.
         disable 'TypographyFractions','TypographyQuotes'
         enable 'RtlHardcoded','RtlCompat', 'RtlEnabled'
@@ -91,6 +96,8 @@ android {
         ignoreWarnings true
         baseline file("lint-baseline.xml")
     }
+}
+
     
 To lint from command line --- gradlew lint
 
