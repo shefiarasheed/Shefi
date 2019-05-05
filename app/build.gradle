@@ -2,6 +2,14 @@ apply plugin: 'com.android.application'
 
 
 android {
+    signingConfigs {
+        nytimes {
+            storeFile file('C:\\Users\\admin\\Downloads\\NYTimes-master (1)\\nytimes.jks')
+            storePassword 'Shefi@890'
+            keyAlias = 'nytimes'
+            keyPassword 'Shefi@890'
+        }
+    }
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
 
