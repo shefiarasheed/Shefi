@@ -9,9 +9,13 @@ This API return json response.
 Done bellow things
 
 1.Created an Android project
+
 2.Created a recycleView with adapter to list the NY times polular
+
 3.Set the duration as 7 in the URL
+
 5.Created the Model class for the json response.
+
 6.Call the API using retrofit to parse the result. 
 7.Parse the Json result and display in recycleview as per requirement 
 8.Used MVC pattern to develop this app.(Model view and controller strategy)
@@ -20,13 +24,16 @@ Done bellow things
 
 
 11.Implemented Espresso UI testing.The testing is implemeted  for validating matching the textview text values with constant String values.For testing this, 
+
 Turn off animation on your test device, go to Settings > Developer Options and turn off all the following options under the "Drawing" section: 
+
 Window animation scale
 Transition animation scale
 Animator duration scale
 
 
 12.Scripts for Gradle,
+
 Gradle Script 
 ######## To Build the project#####
 android {
@@ -113,38 +120,45 @@ To lint from command line --- gradlew lint
     testImplementation 'org.mockito:mockito-core:1.10.19'
 }
    
-To test from command line ---gradlew test
+To test from command line 
+./gradlew test
 
 13.Scripts forFastline Script 
 
-######## To Build the project#####
+######## To Build the project #####
 
-lane :slackbuild do
-gradle(task: "assembleRelease")
-slack(message: "Build Successful!")
-upload_to_slack()
-end
+    lane :slackbuild do
+    gradle(task: "assembleRelease")
+    slack(message: "Build Successful!")
+    upload_to_slack()
+    end
 
+command to build from commndline 
 
-command to build from commndline --- fastlane slackbuild
+./fastlane slackbuild
 
 
 ######### For Linting #########
 
------# Allow output detail in console
-pod_lib_lint(verbose: true)
 // Allow warnings during pod lint
-pod_lib_lint(allow_warnings: true)
 
-command to lint from commndline  --- fastlane run pod_lib_lint------
+    pod_lib_lint(verbose: true)
+    pod_lib_lint(allow_warnings: true)
+   
+
+command to lint from commndline  
+
+./fastlane run pod_lib_lint
 
 ####### To run Instrumented unit test & code coverage ########
 
------lane :tests do
-  gradle(task: "test")
-end
+    lane :tests do
+    gradle(task: "test")
+    end
 
-command to test app from commndline  --- fastlane tests ------
+command to test app from commndline  
+
+./fastlane tests 
 
 14.Attached screen shot of the runnig  Application from my mobile in the github repository
 
@@ -152,3 +166,4 @@ command to test app from commndline  --- fastlane tests ------
 
 16.Installed the Sonarqube plugin the Android studio from file -> settings->plugin(sonarplugin_studio.png).But apply plugin: 'org.sonarqube' is not working in android studio(sonarqube_plugin.png).Feel it only work in IntelliJ IDEA. I am using Android studio for development. 
 17.Implemeted the signed App release to generate the signed APK.The jks file attached to this github repositor(nytimes.jks).Whikle running the app change the path in gradle  file.
+18.Tried to implement fastline.Followed the link https://android.jlelse.eu/fastlane-your-android-app-build-and-upload-apk-to-slack-1a3e20cf6f8c According to this official document Fastlane is written in Ruby and is available as a ruby gem. So technically, any OS, with ruby installed, can run it. However, the official documentation has support and instructions only for macOS. The easiest way to get started is using Homebrew. I am using Windows machine So I can not implement in this project.The explanation of major scrip are included in this ReadMe file. 
