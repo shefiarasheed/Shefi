@@ -30,22 +30,49 @@ Animator duration scale
 Gradle Script 
 ######## To Build the project#####
 android {
-...
-defaultConfig { ... }
-signingConfigs {
-    release {
-        storeFile file("myreleasekey.keystore")
-        storePassword "password"
-        keyAlias "MyReleaseKey"
-        keyPassword "password"
+    signingConfigs {
+        nytimes {
+            storeFile file('C:\\Users\\admin\\Downloads\\NYTimes-master (1)\\nytimes.jks')
+            storePassword 'Shefi@890'
+            keyAlias = 'nytimes'
+            keyPassword 'Shefi@890'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "xebia.nytimes.popular"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
+    lintOptions {
+        // Turns off checks for the issue IDs you specify.
+        disable 'TypographyFractions','TypographyQuotes'
+        enable 'RtlHardcoded','RtlCompat', 'RtlEnabled'
+        check 'NewApi', 'InlinedApi'
+        // If set to true, turns off analysis progress reporting by lint.
+        quiet true
+        // if set to true (default), stops the build if errors are found.
+        abortOnError false
+        // if true, only report errors.
+        ignoreWarnings true
+        baseline file("lint-baseline.xml")
     }
 }
-buildTypes {
-    release {
-        ...
-        signingConfig signingConfigs.release
-    }
-}}
 
  To build from command line --- To run a Gradle command, you can simply use the gradlew script found in the root of your project (or gradlew.bat on Windows) followed by the name of the task you want to run. For instance, to build a debug version of your Android application, you can run ./gradlew assembleDebug from the root of your repositor & for release ./gradlew assembleRelease. In a default project setup, the resulting apk can then be found in app/build/outputs/apk/app-debug.apk
 
