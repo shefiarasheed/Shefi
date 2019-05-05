@@ -77,10 +77,10 @@ android {
  To build from command line --- To run a Gradle command, you can simply use the gradlew script found in the root of your project (or gradlew.bat on Windows) followed by the name of the task you want to run. For instance, to build a debug version of your Android application, you can run ./gradlew assembleDebug from the root of your repositor & for release ./gradlew assembleRelease. In a default project setup, the resulting apk can then be found in app/build/outputs/apk/app-debug.apk
 
 ######### For Linting #########
---- lintOptions {
+
+ lintOptions {
         // Turns off checks for the issue IDs you specify.
         disable 'TypographyFractions','TypographyQuotes'
-        // Turns on checks for the issue IDs you specify. These checks are in
         enable 'RtlHardcoded','RtlCompat', 'RtlEnabled'
         check 'NewApi', 'InlinedApi'
         // If set to true, turns off analysis progress reporting by lint.
@@ -90,7 +90,7 @@ android {
         // if true, only report errors.
         ignoreWarnings true
         baseline file("lint-baseline.xml")
-    }----
+    }
     
 To lint from command line --- gradlew lint
 
