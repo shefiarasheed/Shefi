@@ -119,11 +119,11 @@ To test from command line ---gradlew test
 
 ######## To Build the project#####
 
------lane :slackbuild do
-  gradle(task: "assembleRelease")
-  slack(message: "Build Successful!")
-  upload_to_slack()
-end-----
+lane :slackbuild do
+gradle(task: "assembleRelease")
+slack(message: "Build Successful!")
+upload_to_slack()
+end
 
 
 command to build from commndline --- fastlane slackbuild
