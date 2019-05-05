@@ -101,22 +101,18 @@ android {
 To lint from command line --- gradlew lint
 
 ####### To run Instrumented unit test & code coverage ########
-
----apply plugin: 'java'
- 
-testOptions {
+    
+    testOptions {
         unitTests.includeAndroidResources = true
-    }....
- 
-dependencies {
-     // Optional -- Mockito framework
+    }...
+    // Optional -- Mockito framework
     // Required -- JUnit 4 framework
     testImplementation 'junit:junit:4.12'
     // Optional -- Robolectric environment
     testImplementation 'androidx.test:core:1.0.0'
     testImplementation 'org.mockito:mockito-core:1.10.19'
-} -----
-
+}
+   
 To test from command line ---gradlew test
 
 13.Scripts forFastline Script 
