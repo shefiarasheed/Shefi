@@ -107,4 +107,4 @@ end
 
 command to test app from commndline  --- fastlane tests ------
 
-
+14.Attached screen shot of the Application in tyhe github repository
