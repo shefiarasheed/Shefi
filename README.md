@@ -145,4 +145,7 @@ end
 command to test app from commndline  --- fastlane tests ------
 
 14.Attached screen shot of the Application in the github repository
+
 15.Tried to implemet the SonarQuebe library.Downloaded the library in the laptop & run the localhost by executing Startsonat.bat but unfortunatly i am getting the error.Screen shot(sunqueeeroor.png) is attached
+
+16.Installed the Sonarqube plugin the Android studio from file -> settings->plugin(sonarplugin_studio.png).But apply plugin: 'org.sonarqube' is not working in android studio(sonarqube_plugin.png).Feel it only work in IntelliJ IDEA. I am using Android studio for development. 
