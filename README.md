@@ -17,11 +17,15 @@ Done bellow things
 8.Used MVC pattern to develop this app.(Model view and controller strategy)
 9.Implemeted Junittest. The testing implemented for checking the API key is valid or not
 10.Used good Java coding pattern to implemet this app.
+
+
 11.Implemented Espresso UI testing.The testing is implemeted  for validating matching the textview text values with constant String values.For testing this, 
 Turn off animation on your test device, go to Settings > Developer Options and turn off all the following options under the "Drawing" section: 
 Window animation scale
 Transition animation scale
 Animator duration scale
+
+
 12.Scripts for Gradle,
 Gradle Script 
 ######## To Build the project#####
