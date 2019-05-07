@@ -166,7 +166,7 @@ command to test app from commndline
 
 15.Tried to implemet the SonarQuebe library.Downloaded the library in the laptop & run the localhost by executing Startsonat.bat but unfortunatly i am getting the error.Screen shot(sunqueeeroor.png) is attached.Followed the stack over folow insruction link is attached(https://stackoverflow.com/questions/43811106/how-to-integrate-sonarqube-in-android-studio)
 
-16.Installed the Sonarqube plugin the Android studio from file -> settings->plugin(sonarplugin_studio.png).But apply plugin: 'org.sonarqube' is not working in android studio(sonarqube_plugin.png).Feel it only work in IntelliJ IDEA. I am using Android studio for development. 
+16.Installed the Sonarqube plugin the Android studio from file -> settings->plugin(sonarplugin_studio.png).But apply plugin: 'org.sonarqube' is not working in android studio(sonarqube_plugin.png).Feel it only work in IntelliJ IDE. I am using Android studio for development. 
 
 17.Implemeted the signed App release to generate the signed APK.The jks file attached to this github repositor(nytimes.jks).Whikle running the app change the path in gradle  file.
 
