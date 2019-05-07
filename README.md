@@ -24,16 +24,14 @@ Done bellow things
 
 9.Implemeted Junittest. The testing implemented for checking the API key is valid or not
 
-10.Used good Java coding pattern to implemet this app.
-
-11.Implemented Espresso UI testing.The testing is implemeted  for validating matching the textview text values with constant String values.For testing this, 
+10.Implemented Espresso UI testing.The testing is implemeted  for validating matching the textview text values with constant String values.For testing this, 
 
 To run a single test, open the Project window, and then right-click a test and click Run .
 To test all methods in a class, right-click a class or method in the test file and click Run .
 To run all tests in a directory, right-click on the directory and select Run tests
 
 
-12.Scripts for Gradle,
+11.Scripts for Gradle,
 
 Gradle Script 
 
@@ -125,7 +123,7 @@ To lint from command line --- gradlew lint
 To test from command line 
 ./gradlew test
 
-13.Scripts forFastline Script 
+12.Scripts forFastline Script 
 
 ######## To Build the project #####
 
@@ -162,12 +160,14 @@ command to test app from commndline
 
 ./fastlane tests 
 
-14.Attached screen shot of the runnig  Application from my mobile in the github repository
+13.Attached screen shot of the runnig  Application from my mobile in the github repository
 
-15.Tried to implemet the SonarQuebe library.Downloaded the library in the laptop & run the localhost by executing Startsonat.bat but unfortunatly i am getting the error.Screen shot(sunqueeeroor.png) is attached.Followed the stack over folow insruction link is attached(https://stackoverflow.com/questions/43811106/how-to-integrate-sonarqube-in-android-studio)
+14.Tried to implemet the SonarQuebe library.Downloaded the library in the laptop & run the localhost by executing Startsonat.bat but unfortunatly i am getting the error.Screen shot(sunqueeeroor.png) is attached.Followed the stack over folow insruction link is attached(https://stackoverflow.com/questions/43811106/how-to-integrate-sonarqube-in-android-studio)
 
-16.Installed the Sonarqube plugin the Android studio from file -> settings->plugin(sonarplugin_studio.png).But apply plugin: 'org.sonarqube' is not working in android studio(sonarqube_plugin.png).Feel it only work in IntelliJ IDE. I am using Android studio for development. 
+15.Installed the Sonarqube plugin the Android studio from file -> settings->plugin(sonarplugin_studio.png).But apply plugin: 'org.sonarqube' is not working in android studio(sonarqube_plugin.png).Feel it only work in IntelliJ IDE. I am using Android studio for development. 
 
-17.Implemeted the signed App release to generate the signed APK.The jks file attached to this github repositor(nytimes.jks).Whikle running the app change the path in gradle  file.
+16.Implemeted the signed App release to generate the signed APK.The jks file attached to this github repositor(nytimes.jks).Whikle running the app change the path in gradle  file.
 
-18.Tried to implement fastline.Followed the link https://android.jlelse.eu/fastlane-your-android-app-build-and-upload-apk-to-slack-1a3e20cf6f8c According to this official document Fastlane is written in Ruby and is available as a ruby gem. So technically, any OS, with ruby installed, can run it. However, the official documentation has support and instructions only for macOS. The easiest way to get started is using Homebrew. I am using Windows machine So I can not implement in this project.The explanation of major scrip are included in this ReadMe file. 
+17.Tried to implement fastline.Followed the link https://android.jlelse.eu/fastlane-your-android-app-build-and-upload-apk-to-slack-1a3e20cf6f8c According to this official document Fastlane is written in Ruby and is available as a ruby gem. So technically, any OS, with ruby installed, can run it. However, the official documentation has support and instructions only for macOS. The easiest way to get started is using Homebrew. I am using Windows machine So I can not implement in this project.The explanation of major scrip are included in this ReadMe file. 
+
+18.Used Good Java coding standard and New Android material design for this app development.
