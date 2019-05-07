@@ -28,9 +28,9 @@ Done bellow things
 
 11.Implemented Espresso UI testing.The testing is implemeted  for validating matching the textview text values with constant String values.For testing this, 
 
-Turn off animation on your test device, go to Settings > Developer Options and turn off all the following options under the "Drawing" section: 
-
-Window animation scale,Transition animation scale & Animator duration scale
+To run a single test, open the Project window, and then right-click a test and click Run .
+To test all methods in a class, right-click a class or method in the test file and click Run .
+To run all tests in a directory, right-click on the directory and select Run tests
 
 
 12.Scripts for Gradle,
